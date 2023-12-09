@@ -98,7 +98,7 @@ const SeedListEdit = ({ match }) => {
     return (
         <Container style={{ marginBottom: '50px' }}>
             <Meta
-                title="GrowConnect"
+                title="Kisan-Ke-saath"
             />
             <FormContainer>
                 <h2 style={{ marginTop: '120px', textAlign: 'center' }}>Lend Machine Profile</h2>

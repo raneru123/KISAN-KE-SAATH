@@ -35,7 +35,7 @@ const Footer = () => {
                             </h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
                             <p><i className="fa fa-home mr-3" /> Jaipur,Rajasthan</p>
-                            <p><i className="fa fa-envelope mr-3" /> GrowConnect24@gmail.com</p>
+                            <p><i className="fa fa-envelope mr-3" /> kisanksaath@gmail.com</p>
                             <p><i className="fa fa-phone mr-3" /> +91 1234567890</p>
                         </MDBCol>
                         <MDBCol md="3" lg="4" xl="3" className="mb-4 dark-grey-text">
@@ -48,6 +48,7 @@ const Footer = () => {
                                 <a href=""><i className="fa fa-twitter mr-3"/>Twitter</a><br/><br/>
                                 <a href=""><i className="fa fa-github mr-3"/>GitHub</a><br/><br/>
                                 <a href=""><i className="fa fa-linkedin-in mr-3"/>Linked-in</a><br/>
+                                
                             
                         </MDBCol>
                     </MDBRow>
@@ -55,7 +56,7 @@ const Footer = () => {
                 <div className="footer-copyright-text-center-py-3">
                     <MDBContainer fluid>
                         &copy; {new Date().getFullYear()} Copyright:{" "}
-                        GrowConnect
+                        Kisan-ke-Saath
                         <br />
                     </MDBContainer>
                 </div>

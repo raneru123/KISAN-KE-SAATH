@@ -1,7 +1,7 @@
-import React from 'react';
+import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, Image, Button } from 'react-bootstrap';
 import './Header.css'
 
 import { logout } from './../../actions/userActions'
@@ -15,19 +15,51 @@ const Header = () => {
 
     const logoutHandler = () => {
         dispatch(logout())
-    }
+    }// Remove or comment out this block
+    const googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+            {
+                pageLanguage: "en",
+                autoDisplay: true,
+            },
+            "google_translate_element"
+        );
+    };
+
+    useEffect(() => {
+        var addScript = document.createElement("script");
+        addScript.setAttribute(
+            "src",
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        );
+        document.body.appendChild(addScript);
+        window.googleTranslateElementInit = googleTranslateElementInit;
+    }, []);
+
 
     return (
         <Navbar collapseOnSelect expand="lg" fixed="top">
             <LinkContainer to="/">
                 <Navbar.Brand className="nav-cal" >
-                    <Image width="80px"src="/Logo.png" />
+                    <Image width="100px" src="/Logo.png" />
                 </Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto ">
                     <LinkContainer to="/">
+                        <button className="custom-button">HOME</button>
+                    </LinkContainer>
+                    <LinkContainer to="/farmer">
+                        <button className="custom-button">FARMER</button>
+                    </LinkContainer>
+                    <LinkContainer to="/consumer">
+                        <button className="custom-button">CONSUMER</button>
+                    </LinkContainer>
+                    <LinkContainer to="login?redirect=supplier">
+                        <button className="custom-button">SUPPLIER</button>
+                    </LinkContainer>
+                    {/* <LinkContainer to="/">
                         <Nav.Link className="nav-cal">HOME</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/farmer">
@@ -38,13 +70,21 @@ const Header = () => {
                     </LinkContainer>
                     <LinkContainer to="login?redirect=supplier">
                         <Nav.Link className="nav-cal">SUPPLIER</Nav.Link>
-                    </LinkContainer>
-                    <LinkContainer to="/cart" >
+                    </LinkContainer> */}
+                    <div className='trans' id="google_translate_element"></div>
+                    {/* <LinkContainer to="/cart" >
                         <Nav.Link className={`${userInfo ? "remove-space" : "add-space cart nav-cal"} `}>
                             <i className="fas fa-shopping-cart"></i>
                             CART
                         </Nav.Link>
+                    </LinkContainer> */}
+                    <LinkContainer to="/cart">
+                        <Nav.Link className={`${userInfo ? "remove-space" : "add-space cart nav-cal"} cart-button`}>
+                            <i className="fas fa-shopping-cart"></i>
+                            CART
+                        </Nav.Link>
                     </LinkContainer>
+
                     {
                         userInfo ? (
                             <NavDropdown title={userInfo.name.toUpperCase()} id='username'>
@@ -63,10 +103,11 @@ const Header = () => {
                                 </LinkContainer>
                             </NavDropdown>
                         ) : (
-                                <LinkContainer to="/login">
-                                    <Nav.Link className="login nav-cal">SIGN IN</Nav.Link>
-                                </LinkContainer>
-                            )
+                            <LinkContainer to="/login">
+                                <button className="custom-button">SIGN IN</button>
+                                {/* <Nav.Link className="login nav-cal">SIGN IN</Nav.Link> */}
+                            </LinkContainer>
+                        )
                     }
                     {
                         userInfo && userInfo.isAdmin && (

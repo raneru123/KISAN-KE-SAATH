@@ -33,7 +33,7 @@ const Cart = ({ match, location, history }) => {
     return (
         <Container style={{ marginTop: '100px', marginBottom: '50px' }}>
             <Meta
-                title="GrowConnect"
+                title="Kisan-Ke-saath"
             />
             <Row>
                 <Col md={8}>

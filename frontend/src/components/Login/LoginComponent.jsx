@@ -12,9 +12,7 @@ import Loader from '../Loader/Loader'
 import FormContainer from '../FormContainer/FormContainer'
 import { login } from '../../actions/userActions'
 import Meta from '../Helmet/Meta'
-
 const LoginComponent = ({ location, history }) => {
-
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -38,7 +36,7 @@ const LoginComponent = ({ location, history }) => {
     return (
         <FormContainer>
             <Meta
-                title="GrowConnect "
+                title="Kisan-ke-Saath"
             />
             <h1 style={{ marginTop: '120px' }}>Sign In</h1>
             { error && <Message variant='danger'>{error}</Message>}
@@ -67,7 +65,7 @@ const LoginComponent = ({ location, history }) => {
                 <Button type="submit" variant="primary">Sign In</Button>
             </Form>
             <Row className='py-3'>
-                <Col style={{ marginBottom: '30px' }}>
+                <Col style={{ marginBottom: '30px',color:'black'}}>
                     New Customer? <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Register</Link>
                 </Col>
             </Row>

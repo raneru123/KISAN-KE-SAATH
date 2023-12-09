@@ -8,7 +8,7 @@ const DashboardScreen = () => {
     return (
         <div style={{ marginTop: "110px" }}>
             <Meta
-                title="GrowConnect"
+                title="Kisan-Ke-saath"
             />
             <Container fluid>
                 <Row>

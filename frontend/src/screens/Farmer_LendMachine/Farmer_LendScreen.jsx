@@ -35,7 +35,7 @@ const Farmer_LendScreen = () => {
 
         <div className="MachineLendScreen">
             <Meta
-                title="GrowConnect "
+                title="Kisan-Ke-Saath "
             />
             <Container>
                 <h1 className="p-3" style={{ textAlign: 'center' }}>All Machines</h1>

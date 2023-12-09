@@ -13,7 +13,7 @@ const UserListScreen = () => {
             <Container fluid>
                 <Row>
                     <Col md={3}>
-                        <h4>GrowConnect Users</h4>
+                        <h4>Kisan-Ke-Saath Users</h4>
                     </Col>
                     <Col md={9}>
                         <h4 style={{ marginLeft: "30px" }}>User List</h4>

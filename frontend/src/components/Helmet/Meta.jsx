@@ -12,9 +12,9 @@ const Meta = ({ title, description, keywords }) => {
 }
 
 Meta.defaultProps = {
-    title: 'Welcome To GrowConnect',
+    title: 'Welcome To Kiasa-ke-Saath',
     description: 'Agriclutural website by The Department of Agriculture (DoA) of Sri Lanka along with the Keels ',
-    keywords: 'farmers, GrowConnect, department of agriculture, agricultural science'
+    keywords: 'farmers, Kiasa-ke-Saath, department of agriculture, agricultural science'
 }
 
 export default Meta

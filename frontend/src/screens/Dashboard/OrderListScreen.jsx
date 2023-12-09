@@ -8,12 +8,12 @@ const OrderListScreen = () => {
     return (
         <div style={{ marginTop: "110px" }}>
             <Meta
-                title="GrowConnect"
+                title="Kisan-Ke-saath"
             />
             <Container fluid>
                 <Row>
                     <Col md={3}>
-                        <h4>GrowConnect Orders</h4>
+                        <h4>Kisan-Ke-Saath Orders</h4>
                     </Col>
                     <Col md={9}>
                         <h4 style={{ marginLeft: "30px" }}>All Orders</h4>

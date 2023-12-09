@@ -58,7 +58,7 @@ const FarmerProduct = ({ history, match }) => {
     return (
         <div className="productScreen">
             <Meta
-                title="GrowConnect "
+                title="Kisan-ke-Saath"
             />
             <Container>
                 <Link className="btn btn-go-back btn-dark" to="/admin/supplierproducts">GO BACK</Link>
